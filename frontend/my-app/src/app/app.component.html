@@ -1,0 +1,68 @@
+
+
+<div style="margin: 0 !important;padding: 0 !important; " >
+
+
+
+  <div class="container" style="display: block; border-width: 0px; margin: 0; padding: 150px; background-image: url(../assets/pictures/pexels-abdullah-ghatasheh-1631677\ \(1\).jpg); background-size: cover;   background-repeat:repeat;">
+  
+<div class="title" style="font-size: 20px; text-align: center;margin: 0;padding: 0; ">
+
+<h1 style="margin-top: 50px;padding: 0; font-size: 65px; font-family: sans-serif;;">Notes</h1>
+</div>
+
+
+
+<div class="entire-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 1%; padding: 30px;">
+
+
+        <!-- Overlay -->
+        <app-overlay [isVisible]="isOverlayVisible" (hideOverlay)="hideOverlay()" style="position: absolute;width: 50%; height: 50%; ">
+     
+        </app-overlay>
+        
+  
+    
+        <!-- ... rest of the content ... -->
+
+  <div class="button" style="text-align: center; margin-top: 20px;">
+  
+    <button 
+      (click)="showOverlay()"
+      style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+      Show Overlay
+    </button>
+  </div>
+
+
+  
+  <div style="width: 70%;">
+
+    <div class="note-container" style="display: flex; flex-wrap:wrap; justify-content:space-evenly; ">
+      <div *ngFor="let note of notes" >
+        <div style="display: inline-block; background-color: aqua; font-size: 25px;  padding: 20px; border-radius: 10px; width: 300px;margin-top: 20px;">
+          <div class="note-name" style="padding-bottom: 10px; font-weight: bold;">
+            {{note.name}}
+          </div>
+          <div class="note-category" style="padding-bottom: 10px; text-align: center;">
+            {{note.category}}
+          </div>
+          {{note.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+<style>
+  body {
+    padding: 0;
+    margin:0;
+  }
+</style>
+

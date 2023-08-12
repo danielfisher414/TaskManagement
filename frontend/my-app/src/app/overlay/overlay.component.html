@@ -1,0 +1,17 @@
+<div class="overlay" *ngIf="isVisible" >
+  <div class="overlay-content" style="background-color: white; margin: auto; text-align: center; align-items: center; border-radius: 10px; ">
+    <h2>Overlay Form</h2>
+    <form (submit)="onFormSubmit()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="formData.description" rows="4" required></textarea>
+
+      <div style="padding: 10px;">
+        <button class="button" type="submit">Submit</button>
+        <button class="button" (click)="onCloseClick()">Close</button>
+      </div>
+    </form>
+  </div>
+</div>
